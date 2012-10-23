@@ -131,13 +131,14 @@ enum
 
 // If target is an NSArray, every object in the collection will be observed,
 //	per -addObserver:toObjectsAtIndexes:.
+/**
 - (id<MAKVOObservation>)addObserver:(id)observer
                              object:(id)target
                             keyPath:(id<MAKVOKeyPathSet>)keyPath
                            selector:(SEL)selector
                            userInfo:(id)userInfo
                             options:(NSKeyValueObservingOptions)options;
-
+COnflict with AZNotficationCenter */
 #if NS_BLOCKS_AVAILABLE
 
 - (id<MAKVOObservation>)addObserver:(id)observer
